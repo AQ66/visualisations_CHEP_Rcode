@@ -1,0 +1,16 @@
+#PolarPlot_Update
+install.packages("ggplot2")
+library(ggplot2)
+Bar <- ggplot(BookAB, aes(x=Participants, y=Faculty, fill=Faculty)) +
+  geom_bar(stat="identity") +
+  coord_polar() +
+  geom_text(aes(label=Participants), vjust = 0) +
+  labs(title="How many people have taken part in total/ \nin each faculty?", subtitle="at the start of August 2023", caption = 'Rstudio_AQuinn2023 \ncredit:ggplot2") +
+  theme_void() +
+  xlab("") +
+  ylab("") +
+  theme(plot.title=element_text(hjust=0.5), plot.subtitle = element_text(hjust=0.5)) +
+  theme(plot.title=element_text(size=24, face="bold")) +
+  theme(plot.subtitle=element_text(size=20) +
+  theme(axis.text.y=element_blank(), axis.ticks.y = element_blank(), axis.line.x=element_blank(),axis.line.y=element_blank());
+Bar
