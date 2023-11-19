@@ -1,0 +1,5 @@
+#career level
+
+dat.clean <- na.omit(subset(BookAB, select = c(`Career Level`,`Frequency`)))
+ggplot(dat.clean,aes(`Career Level`,`Frequency`)) + geom_bar(stat="identity", fill='springgreen2') 
++ coord_flip() + labs(title="What is your career level?", subtitle="[November 2023]", caption = "Rstudio_AQuinn2023 \nggplot2") + theme_classic()
