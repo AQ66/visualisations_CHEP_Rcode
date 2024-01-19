@@ -1,3 +1,5 @@
+#age categories within the sample
+
 ggplot(dat.clean2,aes(`Age category`,`Frequency`)) 
 + geom_bar(stat="identity", fill='springgreen2') 
 + labs(title="The number of participants \nby age category", caption = "RStudio\nggplot2") 
