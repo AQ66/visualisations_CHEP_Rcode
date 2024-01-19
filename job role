@@ -1,0 +1,11 @@
+#job role
+
+ggplot(df5, aes(x = "", y = value, fill = group))
++     geom_bar(width = 1, stat = "identity")
++     coord_polar("y", start = 0)
++     scale_fill_brewer(palette = "PuRd")
++     theme_void() 
++     labs(title="The percentage of participants \nby job role", caption = "RStudio\nggplot2") 
++     annotate('text', x = 1, y = 20, label = '52%') 
++     annotate('text', x = 1, y = 80, label = '47%')
++     theme(legend.title=element_blank())
