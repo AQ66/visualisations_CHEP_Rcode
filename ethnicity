@@ -1,0 +1,9 @@
+#ethnicity
+
+ggplot(df2, aes(x="", y=value, fill=group)) 
++ geom_bar(stat="identity", width=1) 
++ coord_polar("y", start=0) 
++ geom_text(aes(label = paste0(value, "%")), position = position_stack(vjust=0.5)) 
++ labs(x = NULL, y = NULL, fill = NULL) + theme_classic() 
++  theme(axis.line = element_blank(), axis.text = element_blank(), axis.ticks = element_blank()) 
++  labs(title="The percentage of participants \nby ethnicity", caption = "RStudio\nggplot2") 
