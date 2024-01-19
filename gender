@@ -9,3 +9,19 @@ lbls <- paste(lbls, pct)
 lbls <- paste(lbls,"%",sep="") # ad % to labels
 pie(slices,labels = lbls, col=rainbow(length(lbls)),
     main="The gender of participants\n[November 2023]", sub="RStudio_AQuinn2023")
+
+#or
+
+df <- data.frame(group= c("Male", "Female", "Prefer not to say"), value=c(18,38,2))
+
+library("scales")
+
+ggplot(df, aes(x = "", y = value, fill = group)) +
+    geom_bar(width = 1, stat = "identity") +
+    coord_polar("y", start = 0) +
+    scale_fill_brewer("") +
+    theme_void() +
+    geom_text(aes(
+        y = value / 2 + c(0, cumsum(value)[-length(value)]),
+        label = percent(value / sum(value))
+    ), size = 5) + labs(title="The percentage of participants \nby gender", caption = "RStudio\nggplot2")
