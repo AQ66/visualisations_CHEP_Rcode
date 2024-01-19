@@ -1,0 +1,5 @@
+ggplot(dat.clean2,aes(`Age category`,`Frequency`)) 
++ geom_bar(stat="identity", fill='springgreen2') 
++ labs(title="The number of participants \nby age category", caption = "RStudio\nggplot2") 
++ theme_classic() + theme(axis.line = element_blank()) + geom_label(label=BookAC$Frequency) 
++ theme(axis.ticks.y = element_blank(),axis.text.y = element_blank())
