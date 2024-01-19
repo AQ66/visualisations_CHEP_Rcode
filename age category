@@ -1,4 +1,4 @@
-#age categories within the sample
+#age categories
 
 ggplot(dat.clean2,aes(`Age category`,`Frequency`)) 
 + geom_bar(stat="identity", fill='springgreen2') 
