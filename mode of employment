@@ -1,0 +1,11 @@
+#mode of employment
+
+ggplot(df4, aes(x = "", y = value, fill = group))
++   geom_bar(width = 1, stat = "identity")
++   coord_polar("y", start = 0)
++   scale_fill_brewer(palette = "Reds")
++   theme_void() 
++   labs(title="The percentage of participants \nby mode of employment", caption = "RStudio\nggplot2") 
++   annotate('text', x = 1, y = 10, label = '21%') 
++   annotate('text', x = 1, y = 50, label = '79%') 
++   theme(legend.title=element_blank())
